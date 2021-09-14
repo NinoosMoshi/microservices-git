@@ -1,11 +1,25 @@
 package com.ninos.model;
 
+import javax.persistence.*;
+
+@Entity
+@Table(name = "players")
 public class PlayerTeam {
 
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
+    @Column(name = "from")
     private String from;
+
+    @Column(name = "to")
     private String to;
+
+    @Column(name = "money_player")
     private int moneyPlayer;
+
+    @Column(name = "money_team")
     private int moneyTeam;
 
     public PlayerTeam() {
